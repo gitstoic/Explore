@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+android:gravity="center_horizontal"    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <ImageView
+            android:layout_width="327dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/castyourvote">
+        </ImageView>
+
+    <TextView
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:text="Thank you for your patience, your details have been verified, proceed to vote."
+        android:textAlignment="center"
+        android:fontFamily="lato"
+        android:textFontWeight="600"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="24dp"
+        >
+    </TextView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cntnue"
+        android:layout_width="327dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#009900"
+        android:layout_marginBottom="49dp"
+        android:layout_marginTop="200dp"
+        android:fontFamily="lato"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        />
+</LinearLayout>
+

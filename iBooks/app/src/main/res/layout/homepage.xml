@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/dsgnbckgrnd"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/top_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#2C59CC"
+            android:orientation="horizontal"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ImageMenu"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_menu_24"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/ImageNotif"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="245dp"
+                android:src="@drawable/ic_notif"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/ImageNotifier"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="-3dp"
+                android:src="@drawable/ic_notifier"
+                app:tint="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/PfpLayout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="18dp"
+                android:background="@drawable/pfp_border"
+                android:backgroundTint="@color/white">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:cardCornerRadius="10dp">
+
+                    <ImageView
+                        android:id="@+id/aminat_pfp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lara" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/greeting_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutToolBar">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Hiya! "
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Omolara"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/comma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text=","
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/quote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_italic"
+            android:text="Books make the world a greater place...."
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/greeting_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:fillViewport="true"
+            app:layout_constraintEnd_toEndOf="@id/dsgnbckgrnd"
+            app:layout_constraintStart_toStartOf="@id/dsgnbckgrnd"
+            app:layout_constraintTop_toBottomOf="@id/dsgnbckgrnd">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrndscroll_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/relativelayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/constrndscroll_layout">
+
+                    <LinearLayout
+                        android:layout_width="354dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/trendingNow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Trending Now"
+                            android:layout_weight="1"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/seeMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAlignment="viewEnd"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="See more"
+                            android:textColor="#2C59CC"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="354dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/book1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/bookcover1"
+                                android:layout_width="112dp"
+                                android:layout_height="146dp"
+                                android:src="@drawable/free_spirit_cover" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/topic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Free Spirit"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/author"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Henry Ford"
+                                android:textColor="#666666"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/book2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/bookcover2"
+                                android:layout_width="112dp"
+                                android:layout_height="146dp"
+                                android:src="@drawable/murder_mystery_at_mischief_manor_cover" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/topic2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Murder Mystery"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/author2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Muna Kris"
+                                android:textColor="#666666"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/book3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/bookcover3"
+                                android:layout_width="112dp"
+                                android:layout_height="146dp"
+                                android:src="@drawable/the_gate_ghost_book_cover" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/topic3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="The Gate Ghost"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/author3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Joshua Adebayo"
+                                android:textColor="#666666"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/relativelayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@id/relativelayout1"
+                    app:layout_constraintStart_toStartOf="@id/relativelayout1"
+                    app:layout_constraintTop_toBottomOf="@id/relativelayout1">
+
+                    <LinearLayout
+                        android:layout_width="354dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/bookClubs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Book Clubs"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/seeMore2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="See more"
+                            android:textColor="#2C59CC"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="354dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/book4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/daybookClubCover1"
+                                android:layout_width="112dp"
+                                android:layout_height="146dp"
+                                android:src="@drawable/monday_book_cover" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/clubBookDay1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Monday Book Club"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/location1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Lagos"
+                                android:textColor="#666666"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/book5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/daybookClubCover2"
+                                android:layout_width="112dp"
+                                android:layout_height="146dp"
+                                android:src="@drawable/friday_book_cover" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/clubBookDay2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Friday Book Club"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/location2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="Abuja"
+                                android:textColor="#666666"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/book6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/daybookClubCover3"
+                                android:layout_width="112dp"
+                                android:layout_height="146dp"
+                                android:src="@drawable/baking_book_cover" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/clubBookDay3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Baking Book Club"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/location3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_regular"
+                                android:text="New York"
+                                android:textColor="#666666"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/relativelayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@id/relativelayout2"
+                    app:layout_constraintStart_toStartOf="@id/relativelayout2"
+                    app:layout_constraintTop_toBottomOf="@id/relativelayout2">
+
+                    <LinearLayout
+                        android:layout_width="354dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/communities"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="Communities"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/seeMore3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="See more"
+                            android:textColor="#2C59CC"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/commImage"
+                        android:layout_width="354dp"
+                        android:layout_height="152dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/communitypicture" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:backgroundTint="#2C59CC"
+            app:tint="@color/white"
+            android:src="@drawable/add_float_btn"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

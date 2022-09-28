@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+android:layout_gravity="center_horizontal"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/Image1"
+            android:layout_width="356dp"
+            android:layout_height="356dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/donsuccess"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/Image2"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="-45dp"
+        android:src="@drawable/party"
+        app:layout_constraintTop_toBottomOf="@id/Image1"
+        app:layout_constraintStart_toStartOf="@id/Image1"
+        app:layout_constraintEnd_toEndOf="@id/Image1"
+        />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/donatnsuccsstxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="16dp"
+            android:text="Donation Successful!"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/Image2"
+            app:layout_constraintStart_toStartOf="@id/Image2"
+            app:layout_constraintEnd_toEndOf="@id/Image2"
+          />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/complimenttxt"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Mark, you just made the world a better place!"
+        android:textColor="#ABABAB"
+        android:textFontWeight="700"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/donatnsuccsstxt"
+        app:layout_constraintStart_toStartOf="@id/donatnsuccsstxt"
+        app:layout_constraintEnd_toEndOf="@id/donatnsuccsstxt"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logout_button"
+        android:layout_width="354dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="90dp"
+        android:backgroundTint="#2C59CC"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Go Back Home"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@id/complimenttxt"
+        app:layout_constraintStart_toStartOf="@id/complimenttxt"
+        app:layout_constraintTop_toBottomOf="@id/complimenttxt"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
