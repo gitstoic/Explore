@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_200"
+    android:fillViewport="true"
+    tools:context=".EducationPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="40dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <ImageView
+            android:id="@+id/name_holder"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/blue_200"
+            android:contentDescription="@string/todo"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@id/guide6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="monospace"
+            android:text="@string/oluwamayowa_oluwagbade0"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/guide1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="monospace"
+            android:text="@string/android_developer_kotlin0"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/guide1"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/home_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/white_200"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/role"
+            app:layout_constraintEnd_toEndOf="@id/guide4"
+            app:layout_constraintTop_toTopOf="@id/name"
+            app:tint="@color/blue_200"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/todot"
+                android:src="@drawable/ic_homepage"
+                app:tint="@color/black" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/education"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/education"
+            app:layout_constraintStart_toStartOf="@id/education"
+            app:layout_constraintTop_toTopOf="@id/education"
+            app:srcCompat="@drawable/ic_education" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/education"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/teal_700"
+            android:gravity="center"
+            android:text="@string/education0"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/name_holder"
+            app:layout_constraintDimensionRatio="3:1"
+            app:layout_constraintEnd_toStartOf="@id/guide2"
+            app:layout_constraintStart_toStartOf="@id/guide1"
+            app:layout_constraintTop_toBottomOf="@id/name_holder" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="1dp"
+            app:layout_constraintBottom_toBottomOf="@id/tools"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/tools"
+            app:layout_constraintStart_toStartOf="@id/tools"
+            app:layout_constraintTop_toTopOf="@id/tools"
+            app:srcCompat="@drawable/ic_skills" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tools"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/purple_200"
+            android:gravity="center"
+            android:text="Tools"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/name_holder"
+            app:layout_constraintDimensionRatio="3:1"
+            app:layout_constraintEnd_toStartOf="@id/guide4"
+            app:layout_constraintStart_toStartOf="@id/guide3"
+            app:layout_constraintTop_toBottomOf="@id/name_holder" />
+
+
+        <ImageView
+            android:id="@+id/ic_ed1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/todo8"
+            android:src="@drawable/ic_degree"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toBottomOf="@id/guide7" />
+
+        <TextView
+            android:id="@+id/year_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:text="@string/_2022"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/ic_ed1"
+            app:layout_constraintStart_toStartOf="@id/ic_ed1"
+            app:layout_constraintTop_toBottomOf="@id/ic_ed1" />
+
+        <TextView
+            android:id="@+id/course1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/mobile_development_internship_kotlin"
+            android:textColor="@color/blue_200"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@id/ic_ed1"
+            app:layout_constraintTop_toTopOf="@id/ic_ed1" />
+
+        <TextView
+            android:id="@+id/school1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/hng_internship_9_0_zuri"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ic_ed1"
+            app:layout_constraintTop_toBottomOf="@id/course1" />
+
+        <TextView
+            android:id="@+id/duration1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/october_present_ongoing"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@id/ic_ed1"
+            app:layout_constraintTop_toBottomOf="@id/school1" />
+
+
+        <ImageView
+            android:id="@+id/ic_ed2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/todo0"
+            android:src="@drawable/ic_degree"
+            app:layout_constraintEnd_toEndOf="@id/ic_ed1"
+            app:layout_constraintStart_toStartOf="@id/ic_ed1"
+            app:layout_constraintTop_toBottomOf="@id/guide8" />
+
+        <TextView
+            android:id="@+id/year_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:text="@string/_2022a"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/ic_ed2"
+            app:layout_constraintStart_toStartOf="@id/ic_ed2"
+            app:layout_constraintTop_toBottomOf="@id/ic_ed2" />
+
+        <TextView
+            android:id="@+id/course2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/android_beginner_s_level_training_program_kotlin"
+            android:textColor="@color/blue_200"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@id/ic_ed2"
+            app:layout_constraintTop_toTopOf="@id/ic_ed2" />
+
+        <TextView
+            android:id="@+id/school2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/kodecamp_2_0_kodehauz"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ic_ed2"
+            app:layout_constraintTop_toBottomOf="@id/course2" />
+
+        <TextView
+            android:id="@+id/duration2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/marcb_july_completed"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@id/ic_ed2"
+            app:layout_constraintTop_toBottomOf="@id/school2" />
+
+        <ImageView
+            android:id="@+id/ic_ed3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/todoq"
+            android:src="@drawable/ic_degree"
+            app:layout_constraintEnd_toEndOf="@id/ic_ed2"
+            app:layout_constraintStart_toStartOf="@id/ic_ed2"
+            app:layout_constraintTop_toBottomOf="@id/guide9" />
+
+        <TextView
+            android:id="@+id/year_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:text="@string/_2012_2019"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/ic_ed3"
+            app:layout_constraintStart_toStartOf="@id/ic_ed3"
+            app:layout_constraintTop_toBottomOf="@id/ic_ed3" />
+
+        <TextView
+            android:id="@+id/course3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/medicine_and_surgery_mb_bs"
+            android:textColor="@color/blue_200"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@id/ic_ed3"
+            app:layout_constraintTop_toTopOf="@id/ic_ed3" />
+
+        <TextView
+            android:id="@+id/school3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/college_of_medicine_unilag"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ic_ed3"
+            app:layout_constraintTop_toBottomOf="@id/course3" />
+
+        <TextView
+            android:id="@+id/duration3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/completed"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@id/school3"
+            app:layout_constraintStart_toStartOf="@id/school3"
+            app:layout_constraintTop_toBottomOf="@id/school3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

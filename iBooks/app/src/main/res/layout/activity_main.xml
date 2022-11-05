@@ -6,13 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/screenpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="167dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:tabBackground="@drawable/indicator_selector"
+        app:tabIndicatorHeight="0dp" />
+
+    <TextView
+        android:id="@+id/click_skip"
+        android:layout_width="31dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="124dp"
+        app:layout_constraintStart_toEndOf="@id/tab_indicator"
+        app:layout_constraintTop_toTopOf="@id/tab_indicator"
+        app:layout_constraintBottom_toBottomOf="@id/tab_indicator"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Skip"
+        android:textColor="#2A2A2A"
+        android:textSize="16sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

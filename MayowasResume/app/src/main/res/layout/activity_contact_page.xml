@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_200"
+    android:fillViewport="true"
+    tools:context=".ContactPage">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="40dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_percent="0.2"
+            app:layout_constraintTop_toBottomOf="@id/guide6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5125" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.675" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8375" />
+
+        <ImageView
+            android:id="@+id/name_holder"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/blue_200"
+            android:contentDescription="@string/todo"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@id/guide6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="monospace"
+            android:text="@string/oluwamayowa_oluwagbade0"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/guide1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="monospace"
+            android:text="@string/android_developer_kotlin0"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/guide1"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/home_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/pink_500"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/role"
+            app:layout_constraintEnd_toEndOf="@id/guide4"
+            app:layout_constraintTop_toTopOf="@id/name"
+            app:tint="@color/blue_200"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/todot"
+                android:src="@drawable/ic_homepage"
+                app:tint="@color/black" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/letsGetToWork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/let_s_get_to_work"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_200"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guide7" />
+
+        <ImageView
+            android:id="@+id/ic_call"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/todo3"
+            android:src="@drawable/ic_call"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toBottomOf="@id/guide8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/_234_809_328_6966"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ic_call"
+            app:layout_constraintStart_toEndOf="@id/ic_call"
+            app:layout_constraintTop_toTopOf="@id/ic_call" />
+
+        <ImageView
+            android:id="@+id/ic_gmail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/todo4"
+            android:src="@drawable/ic_gmail"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toBottomOf="@id/guide9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/oluwamayowamd_gmail_com"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ic_gmail"
+            app:layout_constraintStart_toEndOf="@id/ic_gmail"
+            app:layout_constraintTop_toTopOf="@id/ic_gmail" />
+
+        <ImageView
+            android:id="@+id/ic_linkedin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/todo5"
+            android:src="@drawable/ic_linkedin"
+            app:layout_constraintEnd_toEndOf="@id/ic_gmail"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toBottomOf="@id/guide10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/https_linkedin_com_mayowamd"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ic_linkedin"
+            app:layout_constraintStart_toEndOf="@id/ic_linkedin"
+            app:layout_constraintTop_toTopOf="@id/ic_linkedin" />
+
+        <ImageView
+            android:id="@+id/ic_github"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/todo6"
+            android:src="@drawable/ic_github"
+            app:layout_constraintStart_toStartOf="@id/guide5"
+            app:layout_constraintTop_toBottomOf="@id/guide11" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/https_github_com_gitstoic"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ic_github"
+            app:layout_constraintStart_toEndOf="@id/ic_github"
+            app:layout_constraintTop_toTopOf="@id/ic_github" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
