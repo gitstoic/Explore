@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="?colorOnSecondary"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:text="Explore"
+            android:fontFamily="@font/lobstertwo_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/appname2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_marginStart="0dp"
+            android:text="."
+            android:fontFamily="@font/lobstertwo_bold"
+            app:layout_constraintStart_toEndOf="@id/app_name"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/day_night_mode"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_light_mode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="8dp"
+            app:queryBackground="@android:color/transparent"
+            android:clickable="true"
+            android:background="@drawable/search_background"
+            android:layout_marginTop="10dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search Country"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_name"
+            android:focusable="true"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_languages"
+            android:backgroundTint="?colorSecondaryVariant"
+            android:text="EN"
+            android:textSize="16sp"
+            android:textColor="?colorPrimary"
+            app:cornerRadius="4dp"
+            app:strokeColor="#A9B8D5"
+            app:strokeWidth="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_view"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_filter"
+            android:backgroundTint="?colorSecondaryVariant"
+            android:text="Filter"
+            android:textSize="16sp"
+            android:textColor="?colorPrimary"
+            app:cornerRadius="4dp"
+            app:strokeColor="#A9B8D5"
+            app:strokeWidth="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_view"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

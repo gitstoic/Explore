@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:text="Explore"
+            android:fontFamily="@font/lobstertwo_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/day_night_mode"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_light_mode"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/appname2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:layout_marginStart="0dp"
+            android:text="."
+            android:fontFamily="@font/lobstertwo_bold"
+            app:layout_constraintStart_toEndOf="@id/app_name"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/search_background"
+            android:clickable="true"
+            android:layout_marginTop="10dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search Country"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_name"
+            android:focusable="true" />
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/language"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:paddingHorizontal="6dp"
+          android:background="@drawable/icon_background"
+          android:drawableStart="@drawable/ic_languages"
+          android:drawablePadding="5dp"
+          android:textColor="@color/black"
+          android:text="EN"
+          android:textSize="16sp"
+          android:layout_marginTop="10dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/search_view"/>
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/filter"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginEnd="8dp"
+          android:background="@drawable/icon_background"
+          android:paddingHorizontal="6dp"
+          android:drawableStart="@drawable/ic_filter"
+          android:drawablePadding="5dp"
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          android:text="Filter"
+          android:layout_marginTop="10dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/search_view"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

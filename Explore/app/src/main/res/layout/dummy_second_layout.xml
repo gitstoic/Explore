@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/back_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/ic_arrow_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/country_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Andorra"
+        android:textSize="20sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/back_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/back_arrow"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/country_images"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/country_title">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/andorra_flag"/>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/population"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Population:"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/country_images"
+    />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pop_fig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/population"
+        app:layout_constraintTop_toTopOf="@id/population"
+        app:layout_constraintBottom_toBottomOf="@id/population"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/region"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Region:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/population" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/region_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/region"
+        app:layout_constraintTop_toTopOf="@id/region"
+        app:layout_constraintBottom_toBottomOf="@id/region" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/capital_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capital:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/region" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/capital_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/capital_txt"
+        app:layout_constraintTop_toTopOf="@id/capital_txt"
+        app:layout_constraintBottom_toBottomOf="@id/capital_txt" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/motto_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motto:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/capital_txt" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/motto_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/motto_txt"
+        app:layout_constraintTop_toTopOf="@id/motto_txt"
+        app:layout_constraintBottom_toBottomOf="@id/motto_txt" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/offlang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Official language:"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/motto_txt"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lang_deets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/offlang"
+        app:layout_constraintTop_toTopOf="@id/offlang"
+        app:layout_constraintBottom_toBottomOf="@id/offlang"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ethnic_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ethnic group:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/offlang" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ethnic_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/ethnic_group"
+        app:layout_constraintTop_toTopOf="@id/ethnic_group"
+        app:layout_constraintBottom_toBottomOf="@id/ethnic_group" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/religion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Religion:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ethnic_group" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/religion_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/religion"
+        app:layout_constraintTop_toTopOf="@id/religion"
+        app:layout_constraintBottom_toBottomOf="@id/religion" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/government_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Government:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/religion" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/govt_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/government_txt"
+        app:layout_constraintTop_toTopOf="@id/government_txt"
+        app:layout_constraintBottom_toBottomOf="@id/government_txt" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/independence_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Independence:"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/government_txt"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/independence_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/independence_txt"
+        app:layout_constraintTop_toTopOf="@id/independence_txt"
+        app:layout_constraintBottom_toBottomOf="@id/independence_txt"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/area_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/independence_txt" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/area_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/area_txt"
+        app:layout_constraintTop_toTopOf="@id/area_txt"
+        app:layout_constraintBottom_toBottomOf="@id/area_txt" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/currency_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currency:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/area_txt" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/currency_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/currency_txt"
+        app:layout_constraintTop_toTopOf="@id/currency_txt"
+        app:layout_constraintBottom_toBottomOf="@id/currency_txt" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/gdp_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GDP:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currency_txt" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/gdp_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/gdp_txt"
+        app:layout_constraintTop_toTopOf="@id/gdp_txt"
+        app:layout_constraintBottom_toBottomOf="@id/gdp_txt" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/time_zone_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time zone:"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gdp_txt"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/timezone_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/time_zone_txt"
+        app:layout_constraintTop_toTopOf="@id/time_zone_txt"
+        app:layout_constraintBottom_toBottomOf="@id/time_zone_txt"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/date_formt_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date format:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time_zone_txt" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/date_format_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/date_formt_txt"
+        app:layout_constraintTop_toTopOf="@id/date_formt_txt"
+        app:layout_constraintBottom_toBottomOf="@id/date_formt_txt" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dial_code_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dialling code:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_formt_txt" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dialcode_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/dial_code_txt"
+        app:layout_constraintTop_toTopOf="@id/dial_code_txt"
+        app:layout_constraintBottom_toBottomOf="@id/dial_code_txt" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/driving_side_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Driving side:"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:textColor="?colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dial_code_txt" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/driving_side_deet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="7757455352"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/driving_side_txt"
+        app:layout_constraintTop_toTopOf="@id/driving_side_txt"
+        app:layout_constraintBottom_toBottomOf="@id/driving_side_txt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
